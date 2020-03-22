@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-const TextInputComponent = ({ label }) => (
+const TextInputComponent = ({ label, onChange }) => (
   <Wrapper>
     <Label>{`${label} : `}</Label>
-    <Input></Input>
+    <Input onChange={onChange} />
   </Wrapper>
 );
+
+TextInputComponent.propTypes = {
+  /** 라벨 */
+  label: PropTypes.string.isRequired
+};
 
 export default TextInputComponent;
 
