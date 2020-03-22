@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-const Footer = ({ width, height, content }) => (
-  <Wrapper width={width} height={height}>
-    {content}
-  </Wrapper>
-);
+
+const Footer = ({ content }) => <Wrapper>{content}</Wrapper>;
 
 export default Footer;
 
 const Wrapper = styled.div`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+  width: 100%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: green;
+  color: ivory;
 `;

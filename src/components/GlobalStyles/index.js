@@ -8,6 +8,11 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         width: 100%;
         height: 100%;
+        display: flex;
+        box-sizing: border-box;
+    }
+    div {
+        box-sizing: border-box;
     }
 `;
 

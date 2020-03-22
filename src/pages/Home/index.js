@@ -1,11 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Footer, Header } from "../../components";
+import { SignUpContainer } from "../../containers";
+
 const Home = () => (
   <Container>
-    <Header width={"50%"} height={"20%"} title={"안녕"} />
-    {/* <SignUpContainer /> */}
-    <Footer width={"50%"} height={"20%"} content={"푸터"} />
+    <Screen>
+      <Header content={"헤더입니다"} />
+      <SignUpContainer />
+      <Footer content={"푸터입니다"} />
+    </Screen>
   </Container>
 );
 
@@ -16,6 +20,12 @@ const Container = styled.div`
   height: 100%;
   background: rgb(235, 241, 236);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+`;
+
+const Screen = styled.div`
+  width: 400px;
+  height: 700px;
+  overflow: auto;
 `;
